@@ -11,6 +11,7 @@ function App() {
     <div className="App">
       <Router basename="/micardgo-web">
         <Switch>
+          <Route path="/" exact component={Login} />
           <Route path="/signup" component={Register} />
           <Route path="/login" exact component={Login} />
           {/* <Route path="/profile" component={Profile} /> */}
