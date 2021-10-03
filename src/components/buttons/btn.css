@@ -1,0 +1,40 @@
+.AuthBtn {
+  /* -webkit-appearance: button; */
+  /* -webkit-writing-mode: horizontal-tb !important; */
+  padding: 15px;
+  background-color: #c64156;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: none;
+  height: 60px;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Nunito';
+  font-weight: 700;
+  min-width: 510px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.AuthBtn:focus .AuthBtn:hover {
+  background-color: #733bc3;
+}
+
+.ChoiceBtn {
+  padding: 15px;
+  background-color: #c64156;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Nunito';
+  font-weight: 700;
+  min-width: 250px;
+  padding: 2px;
+  text-decoration: none;
+  cursor: pointer;
+}

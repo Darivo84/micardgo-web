@@ -1,0 +1,53 @@
+.Login {
+  text-align: center;
+}
+
+.AuthContainer {
+  display: flex;
+  min-height: 100vh !important;
+  align-content: center;
+  justify-content: center;
+}
+
+.InnerContainer {
+  height: 100%;
+  align-content: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.PageLogo {
+  width: 150px;
+  height: 140px;
+}
+
+.PageTitle {
+  font-size: 32px;
+  font-family: 'Nunito';
+  font-weight: 700;
+  text-align: center;
+  color: #c64156;
+  margin-top: 5px;
+}
+
+.SubTitle {
+  font-size: 18px;
+  font-family: 'Nunito-Bold';
+  font-weight: 700;
+  color: #733bc3;
+  text-align: center;
+  margin-top: -25px;
+  margin-bottom: 20px;
+}
+
+.AuthSwitchLink {
+  text-decoration: none;
+}
+
+.AuthSwitchText {
+  font-size: 14;
+  font-family: 'Nunito';
+  font-weight: 700;
+  text-align: center;
+  color: #c64156;
+}
