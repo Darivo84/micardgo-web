@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/micardgo-web/static/css/main.d22fa4ca.chunk.css",
-    "main.js": "/micardgo-web/static/js/main.ce4dba20.chunk.js",
-    "main.js.map": "/micardgo-web/static/js/main.ce4dba20.chunk.js.map",
-    "runtime-main.js": "/micardgo-web/static/js/runtime-main.5af45295.js",
-    "runtime-main.js.map": "/micardgo-web/static/js/runtime-main.5af45295.js.map",
-    "static/js/2.d71d883d.chunk.js": "/micardgo-web/static/js/2.d71d883d.chunk.js",
-    "static/js/2.d71d883d.chunk.js.map": "/micardgo-web/static/js/2.d71d883d.chunk.js.map",
-    "static/js/3.eeeeff67.chunk.js": "/micardgo-web/static/js/3.eeeeff67.chunk.js",
-    "static/js/3.eeeeff67.chunk.js.map": "/micardgo-web/static/js/3.eeeeff67.chunk.js.map",
+    "main.js": "/micardgo-web/static/js/main.56ed29d9.chunk.js",
+    "main.js.map": "/micardgo-web/static/js/main.56ed29d9.chunk.js.map",
+    "runtime-main.js": "/micardgo-web/static/js/runtime-main.9a0286cc.js",
+    "runtime-main.js.map": "/micardgo-web/static/js/runtime-main.9a0286cc.js.map",
+    "static/css/2.01a814c7.chunk.css": "/micardgo-web/static/css/2.01a814c7.chunk.css",
+    "static/js/2.330ba5e5.chunk.js": "/micardgo-web/static/js/2.330ba5e5.chunk.js",
+    "static/js/2.330ba5e5.chunk.js.map": "/micardgo-web/static/js/2.330ba5e5.chunk.js.map",
     "index.html": "/micardgo-web/index.html",
-    "static/css/main.d22fa4ca.chunk.css.map": "/micardgo-web/static/css/main.d22fa4ca.chunk.css.map",
-    "static/js/2.d71d883d.chunk.js.LICENSE.txt": "/micardgo-web/static/js/2.d71d883d.chunk.js.LICENSE.txt",
+    "static/css/2.01a814c7.chunk.css.map": "/micardgo-web/static/css/2.01a814c7.chunk.css.map",
+    "static/js/2.330ba5e5.chunk.js.LICENSE.txt": "/micardgo-web/static/js/2.330ba5e5.chunk.js.LICENSE.txt",
+    "static/media/Doctor.51748132.png": "/micardgo-web/static/media/Doctor.51748132.png",
+    "static/media/ApplePayButton.css": "/micardgo-web/static/media/HelveticaNeue-Medium.2880d8f9.ttf",
     "static/media/MICardLogo-Grad.47e2c634.png": "/micardgo-web/static/media/MICardLogo-Grad.47e2c634.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.5af45295.js",
-    "static/js/2.d71d883d.chunk.js",
-    "static/css/main.d22fa4ca.chunk.css",
-    "static/js/main.ce4dba20.chunk.js"
+    "static/js/runtime-main.9a0286cc.js",
+    "static/css/2.01a814c7.chunk.css",
+    "static/js/2.330ba5e5.chunk.js",
+    "static/js/main.56ed29d9.chunk.js"
   ]
 }
