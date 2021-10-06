@@ -1,23 +1,35 @@
 {
   "files": {
-    "main.js": "/micardgo-web/static/js/main.56ed29d9.chunk.js",
-    "main.js.map": "/micardgo-web/static/js/main.56ed29d9.chunk.js.map",
+    "main.js": "/micardgo-web/static/js/main.f19c8051.chunk.js",
+    "main.js.map": "/micardgo-web/static/js/main.f19c8051.chunk.js.map",
     "runtime-main.js": "/micardgo-web/static/js/runtime-main.9a0286cc.js",
     "runtime-main.js.map": "/micardgo-web/static/js/runtime-main.9a0286cc.js.map",
-    "static/css/2.01a814c7.chunk.css": "/micardgo-web/static/css/2.01a814c7.chunk.css",
-    "static/js/2.330ba5e5.chunk.js": "/micardgo-web/static/js/2.330ba5e5.chunk.js",
-    "static/js/2.330ba5e5.chunk.js.map": "/micardgo-web/static/js/2.330ba5e5.chunk.js.map",
+    "static/css/2.28bb0c3d.chunk.css": "/micardgo-web/static/css/2.28bb0c3d.chunk.css",
+    "static/js/2.2e8b9252.chunk.js": "/micardgo-web/static/js/2.2e8b9252.chunk.js",
+    "static/js/2.2e8b9252.chunk.js.map": "/micardgo-web/static/js/2.2e8b9252.chunk.js.map",
     "index.html": "/micardgo-web/index.html",
-    "static/css/2.01a814c7.chunk.css.map": "/micardgo-web/static/css/2.01a814c7.chunk.css.map",
-    "static/js/2.330ba5e5.chunk.js.LICENSE.txt": "/micardgo-web/static/js/2.330ba5e5.chunk.js.LICENSE.txt",
+    "static/css/2.28bb0c3d.chunk.css.map": "/micardgo-web/static/css/2.28bb0c3d.chunk.css.map",
+    "static/js/2.2e8b9252.chunk.js.LICENSE.txt": "/micardgo-web/static/js/2.2e8b9252.chunk.js.LICENSE.txt",
+    "static/media/AntDesign.ttf": "/micardgo-web/static/media/AntDesign.163adab9.ttf",
     "static/media/Doctor.51748132.png": "/micardgo-web/static/media/Doctor.51748132.png",
-    "static/media/ApplePayButton.css": "/micardgo-web/static/media/HelveticaNeue-Medium.2880d8f9.ttf",
-    "static/media/MICardLogo-Grad.47e2c634.png": "/micardgo-web/static/media/MICardLogo-Grad.47e2c634.png"
+    "static/media/Entypo.ttf": "/micardgo-web/static/media/Entypo.a10f4124.ttf",
+    "static/media/EvilIcons.ttf": "/micardgo-web/static/media/EvilIcons.699664b3.ttf",
+    "static/media/Feather.ttf": "/micardgo-web/static/media/Feather.9c7ce8de.ttf",
+    "static/media/FontAwesome.ttf": "/micardgo-web/static/media/FontAwesome.1e59d233.ttf",
+    "static/media/Foundation.ttf": "/micardgo-web/static/media/Foundation.c0cbb004.ttf",
+    "static/media/Ionicons.ttf": "/micardgo-web/static/media/Ionicons.fef568f6.ttf",
+    "static/media/Lunch.4bd9cec2.png": "/micardgo-web/static/media/Lunch.4bd9cec2.png",
+    "static/media/MICardLogo-Grad.47e2c634.png": "/micardgo-web/static/media/MICardLogo-Grad.47e2c634.png",
+    "static/media/MaterialCommunityIcons.ttf": "/micardgo-web/static/media/MaterialCommunityIcons.7e8c4430.ttf",
+    "static/media/MaterialIcons.ttf": "/micardgo-web/static/media/MaterialIcons.5e7382c6.ttf",
+    "static/media/Octicons.ttf": "/micardgo-web/static/media/Octicons.8ba1c974.ttf",
+    "static/media/SimpleLineIcons.ttf": "/micardgo-web/static/media/SimpleLineIcons.3ec13a24.ttf",
+    "static/media/Zocial.ttf": "/micardgo-web/static/media/Zocial.5e415922.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.9a0286cc.js",
-    "static/css/2.01a814c7.chunk.css",
-    "static/js/2.330ba5e5.chunk.js",
-    "static/js/main.56ed29d9.chunk.js"
+    "static/css/2.28bb0c3d.chunk.css",
+    "static/js/2.2e8b9252.chunk.js",
+    "static/js/main.f19c8051.chunk.js"
   ]
 }
