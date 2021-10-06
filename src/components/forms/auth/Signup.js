@@ -2,7 +2,12 @@ import React from 'react';
 import { Formik, Form } from 'formik';
 import { TextField } from './TextField';
 import * as Yup from 'yup';
-import { Link } from 'react-router-dom';
+
+import { useHistory } from 'react-router';
+
+// Api connection to MISSO
+// ==========================================================================================================================
+import client from '../../../api/client';
 
 // Phone Validation
 // ==========================================================================================================================
@@ -10,6 +15,8 @@ const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
 export const Signup = () => {
+  const history = useHistory();
+
   const validate = Yup.object({
     firstName: Yup.string()
       .min(2, 'First name must be at least 2 characters long.')
@@ -33,6 +40,18 @@ export const Signup = () => {
       .required('Confirm password is required!'),
   });
 
+  // SignUp
+  // ==========================================================================================
+  const signUp = async (values, formikActions) => {
+    const res = await client.post('/signup', {
+      ...values,
+    }).then(history.push('/login'))
+
+    console.log(res.data);
+    formikActions.resetForm();
+    formikActions.setSubmitting(false);
+  };
+
   return (
     <Formik
       // Initial values
@@ -45,65 +64,100 @@ export const Signup = () => {
         confirmPassword: '',
       }}
       validationSchema={validate}
-      onSubmit={(values) => {
-        console.log(values);
-      }}
+      onSubmit={signUp}
     >
-      {(formik) => (
-        <div>
-          <h4
-            className="mv-4 font-weight-bold-display-4"
-            style={{
-              fontSize: '18px',
-              color: '#733bc3',
-              fontFamily: 'Nunito',
-              fontWeight: 'bold',
-              textAlign: 'center',
-            }}
-          >
-            Welcome! Please Sign Up.
-          </h4>
-          <Form>
-            <TextField
-              type="text"
-              label="First Name"
-              name="firstName"
-              placeholder="Your first name..."
-            />
-            <TextField
-              type="text"
-              label="Last Name"
-              name="lastName"
-              placeholder="Your last name..."
-            />
-            <TextField
-              type="text"
-              label="Phone Number"
-              name="phoneNumber"
-              placeholder="Your phone number..."
-            />
-            <TextField
-              type="email"
-              label="Email"
-              name="email"
-              placeholder="Your email address..."
-            />
-            <TextField
-              type="password"
-              label="Password"
-              name="password"
-              placeholder="Your password..."
-            />
-            <TextField
-              type="password"
-              label="Confirm Password"
-              name="confirmPassword"
-              placeholder="Confirm your password..."
-            />
+      {({
+        values,
+        errors,
+        touched,
+        isSubmitting,
+        handleChange,
+        handleBlur,
+        handleSubmit,
+      }) => {
+        const {
+          firstName,
+          lastName,
+          phoneNumber,
+          email,
+          password,
+          confirmPassword,
+        } = values;
 
-            <Link to="/info">
+        return (
+          <div>
+            <h4
+              className="mv-4 font-weight-bold-display-4"
+              style={{
+                fontSize: '18px',
+                color: '#733bc3',
+                fontFamily: 'Nunito',
+                fontWeight: 'bold',
+                textAlign: 'center',
+              }}
+            >
+              Welcome! Please Sign Up.
+            </h4>
+            <Form>
+              <TextField
+                value={firstName}
+                error={touched.firstName && errors.firstName}
+                onBlur={handleBlur('firstName')}
+                type="text"
+                label="First Name"
+                name="firstName"
+                placeholder="Your first name..."
+              />
+              <TextField
+                value={lastName}
+                error={touched.lastName && errors.lastName}
+                onBlur={handleBlur('lastName')}
+                type="text"
+                label="Last Name"
+                name="lastName"
+                placeholder="Your last name..."
+              />
+              <TextField
+                value={phoneNumber}
+                error={touched.phoneNumber && errors.phoneNumber}
+                onBlur={handleBlur('phoneNumber')}
+                type="text"
+                label="Phone Number"
+                name="phoneNumber"
+                placeholder="Your phone number..."
+              />
+              <TextField
+                value={email}
+                error={touched.email && errors.email}
+                onBlur={handleBlur('email')}
+                type="email"
+                label="Email"
+                name="email"
+                placeholder="Your email address..."
+              />
+              <TextField
+                value={password}
+                error={touched.password && errors.password}
+                onBlur={handleBlur('password')}
+                type="password"
+                label="Password"
+                name="password"
+                placeholder="Your password..."
+              />
+              <TextField
+                value={confirmPassword}
+                error={touched.confirmPassword && errors.confirmPassword}
+                onBlur={handleBlur('confirmPassword')}
+                type="password"
+                label="Confirm Password"
+                name="confirmPassword"
+                placeholder="Confirm your password..."
+              />
+
               <button
                 className="btn btn-dark mt-3 col-sm-12"
+                submitting={isSubmitting.toString()}
+                onClick={handleSubmit}
                 type="submit"
                 style={{
                   padding: 15,
@@ -115,14 +169,15 @@ export const Signup = () => {
                   height: 50,
                   marginBottom: 20,
                   border: 'none',
+                  minWidth: '100%',
                 }}
               >
                 Sign Up
               </button>
-            </Link>
-          </Form>
-        </div>
-      )}
+            </Form>
+          </div>
+        );
+      }}
     </Formik>
   );
 };

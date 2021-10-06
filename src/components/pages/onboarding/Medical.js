@@ -1,8 +1,8 @@
 import React from 'react';
-import Lunch from '../../assets/images/Lunch.png';
-import { Basic } from '../../forms/onboarding/Basic';
+import Doctor from '../../assets/images/Doctor.png';
+import { Med } from '../../forms/onboarding/Med';
 
-const Info = () => {
+const Medical = () => {
   return (
     <div className="container">
       <div className="row d-flex align-items-center min-vh-100">
@@ -15,10 +15,10 @@ const Info = () => {
               fontFamily: 'Nunito',
               fontWeight: 'bold',
               textAlign: 'center',
-              marginTop: '50px',
+              // marginTop: '50px',
             }}
           >
-            Basic Information
+            Medical Information
           </h2>
           <h4
             className="mv-4 font-weight-bold-display-4"
@@ -30,21 +30,21 @@ const Info = () => {
               textAlign: 'center',
             }}
           >
-            Add to your profile by completing your basic information.
+            Complete your profile by adding your medical information.
           </h4>
           <img
             className="img-fluid"
-            src={Lunch}
-            alt="lunch"
+            src={Doctor}
+            alt="doctor"
             style={{ width: '170', height: '160' }}
           />
         </div>
         <div className="col-md-6">
-          <Basic />
+          <Med />
         </div>
       </div>
     </div>
   );
 };
 
-export default Info;
+export default Medical;

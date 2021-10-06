@@ -4,7 +4,31 @@ import { TextField } from './TextField';
 import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
 
+// Font Icons
+// =======================================================
+import { MaterialCommunityIcons } from 'react-web-vector-icons';
+
+// import { useHistory } from 'react-router-dom';
+
+// Api connection to MISSO
+// ==========================================================================================================================
+import client from '../../../api/client';
+
 export const Basic = () => {
+  // const basicInfo = async (values, formikActions) => {
+  //   const res = await client.post('/info', {
+  //     ...values,
+  //   }).then(history.push('/medical'))
+
+  //   console.log(res.data);
+  //   // formikActions.resetForm();
+  //   // formikActions.setSubmitting(false);
+  // };
+
+  // React.useEffect(() => {
+  //   basicInfo();
+  // });
+
   // Validation
   // =======================================================
   const validate = Yup.object({
@@ -13,7 +37,12 @@ export const Basic = () => {
       .min(4, 'Gender must be at least 4 characters long.')
       .max(6, 'Your gender cannot be more than 6 characters.')
       .required('Your gender is required!'),
-    address: Yup.string().required('Your address is required!'),
+    address1: Yup.string().required('Your address is required!'),
+    address2: Yup.string().required('Your address is required!'),
+    city: Yup.string().required('Your city is required!'),
+    state: Yup.string().required('Your state, county or province is required!'),
+    country: Yup.string().required('Your country is required!'),
+    postalCode: Yup.string().required('Your postal or zip code is required!'),
     allergies: Yup.string().required(
       'If you do not have any allergies, please answer "No"'
     ),
@@ -31,10 +60,12 @@ export const Basic = () => {
       initialValues={{
         dob: '',
         gender: '',
-        address: '',
-        allergies: '',
-        illness: '',
-        medication: '',
+        address1: '',
+        address2: '',
+        city: '',
+        county: '',
+        country: '',
+        postalCode: '',
       }}
       validationSchema={validate}
       onSubmit={(values) => {
@@ -43,19 +74,6 @@ export const Basic = () => {
     >
       {(formik) => (
         <div>
-          <h4
-            className="mv-4 font-weight-bold-display-4"
-            style={{
-              fontSize: '18px',
-              color: '#733bc3',
-              fontFamily: 'Nunito',
-              fontWeight: 'bold',
-              textAlign: 'center',
-            }}
-          >
-            Complete your profile by adding to your basic and medical
-            information.
-          </h4>
           <Form>
             <TextField
               type="text"
@@ -63,37 +81,113 @@ export const Basic = () => {
               name="dob"
               placeholder="dd / mm / yyyy"
             />
-            <TextField
+
+            <div className="row">
+              <div className="col-sm-4 d-flex justify-content-center">
+                <Link to="#" style={{ textDecoration: 'none' }}>
+                  <MaterialCommunityIcons
+                    name="gender-male"
+                    color="red"
+                    size={50}
+                  />
+                  <p
+                    style={{
+                      fontSize: 13,
+                      fontWeight: 'bold',
+                      textAlign: 'left',
+                      color: '#C64156',
+                      paddingBottom: 5,
+                    }}
+                  >
+                    Male
+                  </p>
+                </Link>
+              </div>
+              <div className="col-sm-4 d-flex justify-content-center">
+                <Link to="#" style={{ textDecoration: 'none' }}>
+                  <MaterialCommunityIcons
+                    name="gender-female"
+                    color="#733BC3"
+                    size={50}
+                  />
+                  <p
+                    style={{
+                      fontSize: 13,
+                      fontWeight: 'bold',
+                      textAlign: 'left',
+                      color: '#C64156',
+                      paddingBottom: 5,
+                    }}
+                  >
+                    Female
+                  </p>
+                </Link>
+              </div>
+              <div className="col-sm-4 d-flex justify-content-center">
+                <Link to="#" style={{ textDecoration: 'none' }}>
+                  <MaterialCommunityIcons
+                    name="gender-transgender"
+                    color="#733BC3"
+                    size={50}
+                  />
+                  <p
+                    style={{
+                      fontSize: 13,
+                      fontWeight: 'bold',
+                      textAlign: 'left',
+                      color: '#C64156',
+                      paddingBottom: 5,
+                    }}
+                  >
+                    Other
+                  </p>
+                </Link>
+              </div>
+            </div>
+
+            {/* <TextField
               type="text"
               label="Gender"
               name="gender"
               placeholder="Male / Female / Other"
-            />
+            /> */}
             <TextField
               type="text"
-              label="Address"
-              name="address"
+              label="Address Line 1"
+              name="address1"
               placeholder="Your address..."
             />
             <TextField
               type="text"
-              label="Please specify your allergies"
-              name="allergies"
-              placeholder="If you suffer from any allergies, please let us know..."
+              label="Address Line 2"
+              name="address2"
+              placeholder="Your address continued..."
             />
             <TextField
               type="text"
-              label="Please specify your illnesses"
-              name="illness"
-              placeholder="If you suffer from any illnesses, please let us know..."
+              label="City"
+              name="city"
+              placeholder="Your city..."
             />
             <TextField
               type="text"
-              label="Please specify your medication"
-              name="medication"
-              placeholder="If you consume any medications, please let us know..."
+              label="State / County / Province"
+              name="state"
+              placeholder="Your state, county or province..."
             />
-            <Link to="/profile">
+            <TextField
+              type="text"
+              label="Country"
+              name="country"
+              placeholder="Your country..."
+            />
+            <TextField
+              type="text"
+              label="Postal / Zip Code"
+              name="postalCode"
+              placeholder="Your postal or zip code..."
+            />
+            <Link to="/medical">
               <button
                 className="btn btn-dark mt-3 col-sm-12"
                 type="submit"
@@ -107,9 +201,10 @@ export const Basic = () => {
                   height: 50,
                   marginBottom: 20,
                   border: 'none',
+                  minWidth: '100%',
                 }}
               >
-                Update
+                Continue
               </button>
             </Link>
             <br />

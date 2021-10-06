@@ -22,7 +22,7 @@ export const TextField = ({ label, ...props }) => {
         className={`form-control shadow-none ${meta.touched && meta.error && 'is-invalid'}`}
         {...field}
         {...props}
-        autoComplete="off"
+        autoComplete="on"
         style={{
           backgroundColor: '#e5e7eb',
           padding: 15,
