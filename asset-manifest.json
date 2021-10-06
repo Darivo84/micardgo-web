@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/micardgo-web/static/js/main.f19c8051.chunk.js",
-    "main.js.map": "/micardgo-web/static/js/main.f19c8051.chunk.js.map",
+    "main.js": "/micardgo-web/static/js/main.46055ca1.chunk.js",
+    "main.js.map": "/micardgo-web/static/js/main.46055ca1.chunk.js.map",
     "runtime-main.js": "/micardgo-web/static/js/runtime-main.9a0286cc.js",
     "runtime-main.js.map": "/micardgo-web/static/js/runtime-main.9a0286cc.js.map",
     "static/css/2.28bb0c3d.chunk.css": "/micardgo-web/static/css/2.28bb0c3d.chunk.css",
@@ -30,6 +30,6 @@
     "static/js/runtime-main.9a0286cc.js",
     "static/css/2.28bb0c3d.chunk.css",
     "static/js/2.2e8b9252.chunk.js",
-    "static/js/main.f19c8051.chunk.js"
+    "static/js/main.46055ca1.chunk.js"
   ]
 }
